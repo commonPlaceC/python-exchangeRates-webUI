@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link rel="icon" icon="image/png" href="./public/img/favicon.png"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src ="eel.js"></script>
+</head>
+<body>
+    <div class=""header>
+        <img class="mainLogo" src="public/img/reload.png" width="150px" height="150px"/>
+        <h1>Currency Converter</h1>
+        <div class="wrapper">
+            <input id='typeHere' placeholder="type here..." required>
+            <span class="toCurrency">Rubles to dollars</span> 
+            <button id="show" onClick="displayCurrency()">Convert</button>
+
+            <div id='info'></div>
+            <script type="text/javascript">
+
+                async function displayCurrency() {
+                    let ammount = document.getElementById('typeHere').value;
+
+                    let res = await eel.convertCurrency(ammount)();
+                    document.getElementById('info').innerHTML = res;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
