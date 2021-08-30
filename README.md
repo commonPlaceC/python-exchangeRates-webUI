@@ -4,5 +4,5 @@ Using eel python library to display information in web interface
 
 ### main.py - Program starting file
 
-Eel helps to use python's logic in html
-All data of exchange rates is getting form google search page
+Eel helps to use python's logic in HTML<br/>
+All data of exchange rates is getting from Google search page
