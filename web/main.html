@@ -12,6 +12,8 @@
     <script type="text/javascript" src ="eel.js"></script>
 </head>
 <body>
+
+    
     <div class=""header>
         <img class="mainLogo" src="public/img/reload.png" width="150px" height="150px"/>
         <h1>Currency Converter</h1>
@@ -23,21 +25,43 @@
             <input id='typeHere' placeholder="1.00" required>
         </div>
         <div class="wrapper2">
-            <div>
-                <button id="show" onClick="displayCurrency()">Convert</button>
-                <div id='info'></di>
-            </div>
-            <button id="usd">Dollars</button>
-            <button id="eur">Euros</button>
-            <button id="yen">Yens</button>
+            <button id="show" onClick="displayCurrency()">Convert</button>
+            <div id='info'></div>
+            <button id="usd" onClick="choice1()"><img src="https://img.icons8.com/color/30/000000/usa.png"/>Dollars</button>
+            <button id="eur" onClick="choice2()"><img src="https://img.icons8.com/color/30/000000/flag-of-europe.png"/>Euros</button>
+            <button id="yen" onClick="choice3()"> <img src="https://img.icons8.com/color/30/000000/japan.png"/>Yens</button>
+
+            <script type="text/javascript">
+                function choice1() {
+                    let choice = 1;
+                    window.choice=choice;
+                }
+                
+                function choice2() {
+                    let choice = 2;
+                    window.choice=choice;
+                }
+                
+                function choice3() {
+                    let choice = 3;
+                    window.choice=choice;
+                }
+            </script>
         </div>
                 <script type="text/javascript">
                     async function displayCurrency() {
                         let input = document.getElementById('typeHere').value;
-                        ammount = Number(input)
-
-                        let res = await eel.convertCurrency(ammount)();
+                        let userChoice = window.choice;
+                        if (userChoice === undefined) {
+                            alert('Please select your currency😭');
+                        };
+                        if (input.length == 0){
+                            alert('Please enter your summ😭');
+                        } else {
+                            ammount = Number(input);
+                        let res = await eel.convertCurrency(ammount, userChoice)();
                         document.getElementById('info').innerHTML = res;
+                        }
                     }
                 </script>
         </div>
