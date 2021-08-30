@@ -4,33 +4,47 @@
 }
 
 body {
+    padding: 10px;
     margin: 0;
     display: block;
     justify-content: center;
     background-color: rgb(32, 31, 41);
 }
 
-.wrapper {
+.mainLogo {
+    filter: invert(1);
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.wrapper1 {
+    display: grid;
+    grid-template-columns: 10% 90%;
     background-color: rgba(117, 117, 117, 0.2);
-    height: 100%;
-    padding: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 10px;
     border: solid 2px rgba(255, 255, 255, 0.2);
     border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.wrapper1 div{
+    display: block;
+    align-items: right;
 }
 
 h1 {
+    font-family: 'Poiret One', cursive;
     text-align: center;
     font-size: 70px;
     font-weight: lighter;
 }
 
 input {
-    display: block;
+    position: relative;
     background-color: rgba(199, 193, 255, 0.3);
     border-radius: 12px;
-    width: 50%;
+    width: 60%;
     height: 6rem;
     color: rgb(255, 255, 255);
     margin: auto;
@@ -56,11 +70,22 @@ input:focus {
 
 }
 
-.mainLogo {
-    display: block;
-    margin: auto;
-    margin-top: 20px;
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 80px 80px 80px;
+    background-color: rgba(117, 117, 117, 0.2);
+    padding: 10px;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
 }
+
+.wrapper2 div {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
 
 #show {
     display: block;
@@ -83,3 +108,54 @@ input:focus {
 #show:hover {
     background-color:rgb(45, 119, 255);
 }
+
+#info {
+    padding: auto;
+    background-color: rgba(199, 193, 255, 0.3);
+    border-radius: 12px;
+    width: 50%;
+    height: 6rem;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+    font-size: 3rem;
+    box-shadow: 0px 10px 20px 10px rgba(27, 17, 63, 0.15);
+    border: solid 2px rgba(230, 230, 255, 0.1);
+}
+
+.wrapper2 :nth-child(3){
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 30px;
+    background-color: rgba(210, 170, 255, 0.4);
+    outline: none;
+    border: solid 1px rgb(196, 151, 255);
+    color:rgb(32, 31, 41);
+    border-radius: 12px;
+}
+
+.wrapper2 :nth-child(4){
+    font-size: 30px;
+    grid-row: 2;
+    grid-column: 1;
+    background-color: rgba(210, 170, 255, 0.4);
+    outline: none;
+    border: solid 1px rgb(196, 151, 255);
+    color:rgb(32, 31, 41);
+    border-radius: 12px;
+}
+
+.wrapper2 :nth-child(5){
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 30px;
+    background-color: rgba(210, 170, 255, 0.4);
+    outline: none;
+    border: solid 1px rgb(196, 151, 255);
+    color:rgb(32, 31, 41);
+    border-radius: 12px;
+}
+

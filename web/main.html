@@ -8,27 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <script type="text/javascript" src ="eel.js"></script>
 </head>
 <body>
     <div class=""header>
         <img class="mainLogo" src="public/img/reload.png" width="150px" height="150px"/>
         <h1>Currency Converter</h1>
-        <div class="wrapper">
-            <input id='typeHere' placeholder="type here..." required>
-            <span class="toCurrency">Rubles to dollars</span> 
-            <button id="show" onClick="displayCurrency()">Convert</button>
+        <div class="wrapper1">
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/russian-federation-circular.png"/><br/>
+                <span>Rubles</span>
+            </div>
+            <input id='typeHere' placeholder="1.00" required>
+        </div>
+        <div class="wrapper2">
+            <div>
+                <button id="show" onClick="displayCurrency()">Convert</button>
+                <div id='info'></di>
+            </div>
+            <button id="usd">Dollars</button>
+            <button id="eur">Euros</button>
+            <button id="yen">Yens</button>
+        </div>
+                <script type="text/javascript">
+                    async function displayCurrency() {
+                        let input = document.getElementById('typeHere').value;
+                        ammount = Number(input)
 
-            <div id='info'></div>
-            <script type="text/javascript">
-
-                async function displayCurrency() {
-                    let ammount = document.getElementById('typeHere').value;
-
-                    let res = await eel.convertCurrency(ammount)();
-                    document.getElementById('info').innerHTML = res;
-                }
-            </script>
+                        let res = await eel.convertCurrency(ammount)();
+                        document.getElementById('info').innerHTML = res;
+                    }
+                </script>
         </div>
     </div>
 </body>
