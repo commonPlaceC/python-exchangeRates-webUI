@@ -3,6 +3,14 @@
     color: aliceblue;
 }
 
+.unselectable {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;  
+    -khtml-user-select: none;       
+    -ms-user-select: none;       
+    user-select: none; 
+  }
+
 body {
     padding: 10px;
     margin: 0;
