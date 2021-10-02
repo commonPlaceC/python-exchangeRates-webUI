@@ -10,7 +10,7 @@ All data of exchange rates is getting from Google search page
 ---
 ## How to use
 1. **Get your User-Agent:** type *Get user agent* in Chrome
-2. Copy your Agent to main.py to *headers = {'User-Agent': ''}*
+2. Copy your Agent to main.py to *headers = {'User-Agent': ''}*<br/>
     <img src='./img/tip.png'>
 3. Save changes and **start main.py**
 
